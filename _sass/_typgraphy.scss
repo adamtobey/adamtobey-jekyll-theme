@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Philosopher:700|Source+Serif+Pro');
+
+$font-body: 'Source Serif Pro', serif;
+$font-head: 'Philosopher', sans-serif;
+
+$font-size-h1: 48pt;
+$font-size-h2: $font-size-h1 * 0.85;
+$font-size-h2: $font-size-h1 * 0.7;
+
+$font-size-body: 14pt;
+
+@mixin type-clobber() {
+  font-style: inherit;
+  font-variant: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  text-decoration: inherit;
+}
+
+@mixin type-body() {
+  font-family: $font-body;
+  font-size: $font-size-body;
+}
+
+@mixin type-heading($size) {
+  font-family: $font-head;
+  font-size: $size;
+  font-weight: bold;
+}
+
+@mixin type-h1() {
+  @include type-heading($font-size-h1);
+}
+
+@mixin type-h2() {
+  @include type-heading($font-size-h2);
+}
+
+@mixin type-h3() {
+  @include type-heading($font-size-h3);
+}

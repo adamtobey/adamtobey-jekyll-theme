@@ -1,1 +1,13 @@
-{{ content }}
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body>
+    {% include sidenav.html hide=false %}
+    <main class="page-content">
+      {{ content }}
+    </main>
+  </body>
+
+</html>
